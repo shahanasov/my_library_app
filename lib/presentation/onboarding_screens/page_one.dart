@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_library/custom/theme.dart';
+import 'package:my_library/presentation/sign_in&sign_up/sign_in.dart';
 import 'package:my_library/widgets/buttons.dart';
 import 'package:my_library/widgets/onboardingwidget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -17,7 +19,9 @@ class OnBoardingOne extends StatelessWidget {
           automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           leading: TextButton(
-              onPressed: () {},
+              onPressed: () {
+               Get.off(() => SignIn());
+              },
               child: Text(
                 'Skip',
                 style: TextStyle(color: AppTheme().mainColor),
@@ -53,18 +57,20 @@ class OnBoardingOne extends StatelessWidget {
           spacing: 15,
           children: [
             SmoothPageIndicator(
-              controller: controller,
-              count: 3,
-              effect: WormEffect(
-                  dotColor: AppTheme().grey,
-                  activeDotColor: AppTheme().mainColor,
-                  dotHeight: 5,
-                  dotWidth: 5,
-                  type: WormType.thinUnderground,
-                  spacing: 2),
-            ),
-            button(),
-            button()
+                controller: controller,
+                count: 3,
+                effect: ScaleEffect(
+                    activeStrokeWidth: 1,
+                    dotColor: AppTheme().grey,
+                    activeDotColor: AppTheme().mainColor,
+                    dotHeight: 5,
+                    dotWidth: 5,
+                    spacing: 5)),
+            boardingpagebutton(
+                hint: 'Get Started',
+                color: AppTheme().mainColor,
+                context: context),
+            boardingpagebutton(hint: 'Sign in', context: context)
           ],
         ),
       ),

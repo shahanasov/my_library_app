@@ -34,7 +34,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  #   a set of built-in effects that you can use to animate the active dot,
+  # you can also customize each effect to your liking.
   smooth_page_indicator: ^1.2.0+3
+  # GetX is an extra-light and powerful solution for Flutter. It combines high-performance
+  # state management, intelligent dependency injection, and route management quickly and practically.
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
