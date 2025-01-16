@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_library/custom/theme.dart';
-import 'package:my_library/presentation/sign_in&sign_up/sign_up.dart';
+import 'package:my_library/presentation/bottom_navigation/bottom_nav.dart';
 import 'package:my_library/widgets/buttons.dart';
 import 'package:my_library/widgets/textfield.dart';
 
@@ -50,7 +50,7 @@ class SignIn extends StatelessWidget {
               style: TextStyle(color: Colors.blue),
             ),
             onPressed: () {
-              Get.to(SignUpScreen());
+              Get.to(LandingPage());
             },
           )
         ],
